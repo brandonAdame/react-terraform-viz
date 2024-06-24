@@ -3,6 +3,10 @@ import logo from '../../assets/Logo.svg'
 import github_logo from '../../assets/github_logo.svg'
 import './header.css'
 
+function GithubRedirect() {
+    return window.open('https://github.com/brandonAdame/react-terraform-viz', '_blank', 'noreferrer')
+}
+
 function Header() {
     return (
         <>
@@ -14,12 +18,11 @@ function Header() {
                     <img src={logo} alt='logo' className='logo' />
                 </div>
                 <div className='right-logo'>
-                    <img src={github_logo} alt='github_logo' className='github_logo' />
+                    <img src={github_logo} alt='github_logo' className='github_logo' onClick={GithubRedirect}/>
                 </div>
             </div>
             <div className='bottom-line'></div>
         </>
-
     )
 }
 
